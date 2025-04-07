@@ -1,0 +1,290 @@
+:root {
+  --primary-color: #008ad9;
+  --text-color: #000;
+  --light-color: #f3f3f3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-inline-size: 1400px;
+  margin: auto;
+  padding: 0px 40px;
+}
+
+.menu-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  color: var(--primary-color);
+}
+
+.menu_item {
+  display: flex;
+}
+
+.menu_item li {
+  list-style: none;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+/* Secont Container width */
+
+.secont-container {
+  max-width: 1280px;
+  margin: auto;
+  color: var(--primary-color);
+}
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  padding: 40px;
+  gap: 40px;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.tex-container {
+  font-family: Arial, Helvetica, sans-serif;
+  flex: 1;
+}
+
+.tag-line {
+  font-size: 20px;
+  margin-block-end: 10px;
+  font-weight: 600;
+}
+
+.main-text {
+  font-size: 65px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  margin-block-end: 20px;
+  line-height: 1.2;
+}
+
+.brand {
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.brand-logo {
+  font-size: 3rem;
+}
+
+.description-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.box {
+  flex: 1 1 calc(33.33% - 20px);
+  text-align: center;
+  padding: 0px 50px;
+  margin-bottom: 20px;
+}
+
+.box img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.box h1 {
+  margin: 10px 0px 10px 0px;
+  font-weight: 500;
+}
+.box p {
+  font-weight: 200px;
+  line-height: 2;
+}
+
+.work {
+  margin-top: 100px;
+  margin-bottom: 80px;
+}
+
+.work h2 {
+  font-size: 2rem;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.latest-work-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+  justify-self: center;
+}
+
+.latest_work {
+  height: 407px;
+  width: 315px;
+  background-color: blueviolet;
+}
+
+.client {
+  height: 300px;
+  width: 300px;
+  background-color: red;
+}
+
+/* Here started footer */
+.footer {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  gap: 80px;
+}
+
+.address,
+.form {
+  flex: 1;
+}
+
+/* Address box */
+.address {
+  /* padding: 0 400px 0px 0px; */
+}
+.address p {
+  line-height: 1.5;
+}
+.address ul {
+  margin-top: 30px;
+}
+.address ul i {
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.address h1,
+.address p {
+  margin-bottom: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form input,
+.form textarea {
+  padding: 16px;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  background-color: var(--light-color);
+}
+button {
+  max-width: 200px;
+  padding: 16px;
+  font-size: 1rem;
+  border: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-icon {
+  display: none;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+  height: 20px;
+  width: 20px;
+}
+
+.menu-icon .dot {
+  width: 7px;
+  height: 7px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Media Screen */
+
+@media screen and (max-width: 768px) {
+  .menu_item {
+    display: none;
+  }
+
+  .menu-icon {
+    display: grid;
+  }
+  /* Here Section */
+  .hero-section {
+    flex-direction: column;
+    padding: 0px;
+    margin-bottom: 60px;
+  }
+
+  .tex-container {
+    max-width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .tag-line {
+    font-size: 16px;
+  }
+  .main-text {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .brand {
+    padding: 20px;
+  }
+  .brand-logo {
+    font-size: 2rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .address ul i {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+  .latest-work-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    justify-self: center;
+  }
+
+  /*  */
+
+  .description-container {
+    display: flex;
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
